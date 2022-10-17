@@ -152,6 +152,13 @@ header {
     align-items: center;
 }
 
+.active {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid rgb(225, 11, 249);
+    transition: 0.5 ease;
+}
+
 .navbar .nav-list .nav-item:last-child {
     margin-right: 0;
 }
@@ -161,11 +168,11 @@ header {
     color: #f7f7f7;
 }
 
-.break-section {
-    width: 100px;
-    height: 2px;
-    margin: 40px auto 20px auto;
-}
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+    }
+} 
 
 .section {
     justify-content: space-around;
@@ -187,6 +194,7 @@ header {
     flex-direction: column;
     line-height: 1.8rem;
     align-items: center;
+    font-size: 18px;
 }
 
 .image {
@@ -351,16 +359,16 @@ header {
 
 .form {
     padding: 13px;
+    border-radius: 5px;
 }
 
-.form .text-input {
+.form input {
     border: none;
     width: 200px;
-    padding: 0 10px;
-}
-
-.form .text-input:focus {
-    border: none;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 5px;
 }
 
 .form .btn {
@@ -401,4 +409,18 @@ header {
 .footer .description-project {
     text-align: justify;
     line-height: 1.5rem;
+}
+
+.hr-section {
+    width: 150px;
+    height: 2px;
+    border: none;
+    margin: 40px auto 20px auto;
+}
+
+.hr-plan {
+    width: 100px;
+    height: 2px;
+    border: none;
+    margin: 10px auto 10px auto;
 }
